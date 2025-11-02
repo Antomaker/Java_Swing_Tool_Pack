@@ -1,0 +1,13 @@
+totalXP:25
+level:1
+currentLevelXP:25
+xpToNextLevel:100
+dailyChallengeStreak:0
+lessonScore:Gráficos,50
+lessonScore:Texto,100
+lessonScore:Botones,100
+achievement:first_lesson
+achievement:quiz_master
+quizAttempt:Gráficos,1
+quizAttempt:Texto,1
+quizAttempt:Botones,1

@@ -1,0 +1,6 @@
+Texto,completed
+Botones,completed
+Selección,none
+Avanzados,none
+Otros,none
+Adicionales,none
