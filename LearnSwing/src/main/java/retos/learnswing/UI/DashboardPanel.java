@@ -18,8 +18,10 @@ import retos.learnswing.panels.ButtonPanel;
 import retos.learnswing.panels.ChallengePanel;
 import retos.learnswing.panels.ChartsPanel;
 import retos.learnswing.panels.CodeViewPanel;
+import retos.learnswing.panels.ComponentGalleryPanel;
 import retos.learnswing.panels.OtherPanel;
 import retos.learnswing.panels.QuizPanel;
+import retos.learnswing.panels.SampleProjectsPanel;
 import retos.learnswing.panels.SelectionPanel;
 import retos.learnswing.panels.TextPanel;
 
@@ -156,7 +158,7 @@ public class DashboardPanel extends JPanel {
         Map<String, String> progress = UserManager.getAllLessonProgress();
 
         // Lesson data
-        String[] lessonNames = { "Texto", "Botones", "Selección", "Avanzados", "Otros", "Adicionales", "Gráficos" };
+        String[] lessonNames = { "Texto", "Botones", "Selección", "Avanzados", "Otros", "Adicionales", "Gráficos", "Galería", "Proyectos" };
         String[] descriptions = {
                 "Campos de texto, áreas de texto y campos de contraseña",
                 "Botones, checkboxes y radio buttons",
@@ -164,7 +166,9 @@ public class DashboardPanel extends JPanel {
                 "Tablas, sliders y barras de progreso",
                 "Spinners, campos formateados y toggles",
                 "Árboles, selectores de archivos y colores",
-                "Gráficos 2D, barras, líneas y visualización de datos"
+                "Gráficos 2D, barras, líneas y visualización de datos",
+                "Constructor visual de interfaces con drag & drop",
+                "Proyectos completos: gestor de usuarios, biblioteca, inventario y farmacia"
         };
 
         for (int i = 0; i < lessonNames.length; i++) {
@@ -354,30 +358,34 @@ public class DashboardPanel extends JPanel {
 
     /**
      * Creates the appropriate lesson panel based on lesson name.
-     *
-     * @param lessonName The name of the lesson
-     * @return The lesson panel
-     */
-    private JPanel createLessonPanel(String lessonName) {
-        switch (lessonName) {
-            case "Texto":
-                return new TextPanel();
-            case "Botones":
-                return new ButtonPanel();
-            case "Selección":
-                return new SelectionPanel();
-            case "Avanzados":
-                return new AdvancedPanel();
-            case "Otros":
-                return new OtherPanel();
-            case "Adicionales":
-                return new AdditionalComponentsPanel();
-            case "Gráficos":
-                return new ChartsPanel();
-            default:
-                return new JPanel();
-        }
-    }
+      *
+      * @param lessonName The name of the lesson
+      * @return The lesson panel
+      */
+     private JPanel createLessonPanel(String lessonName) {
+         switch (lessonName) {
+             case "Texto":
+                 return new TextPanel();
+             case "Botones":
+                 return new ButtonPanel();
+             case "Selección":
+                 return new SelectionPanel();
+             case "Avanzados":
+                 return new AdvancedPanel();
+             case "Otros":
+                 return new OtherPanel();
+             case "Adicionales":
+                 return new AdditionalComponentsPanel();
+             case "Gráficos":
+                 return new ChartsPanel();
+             case "Galería":
+                 return new ComponentGalleryPanel();
+             case "Proyectos":
+                 return new SampleProjectsPanel();
+             default:
+                 return new JPanel();
+         }
+     }
 
     /**
      * Refreshes the dashboard to show updated progress.
